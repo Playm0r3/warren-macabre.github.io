@@ -1,0 +1,173 @@
+:root{
+     --bg:#eef1f6;
+     --ink:#131a2b;
+     --muted:#4d586f;
+     --line:#c9d0de;
+     --accent:#96560f;
+     --sun:#d9962f;
+     --display:"Oswald", Arial, system-ui, sans-serif;
+     --body:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
+}
+ @media (prefers-color-scheme:dark){
+     :root{
+        --bg:#0f1626;
+         --ink:#e8ebf2;
+         --muted:#9aa5bd;
+         --line:#26314a;
+         --accent:#e6a84f;
+         --sun:#e6a84f;
+    }
+}
+ *{
+    box-sizing:border-box
+}
+ html{
+    scroll-behavior:smooth
+}
+ body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:400 1.0625rem/1.65 var(--body)
+}
+ a{
+    color:var(--accent);
+    text-underline-offset:.2em
+}
+ a:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:2px
+}
+ .wrap{
+    max-width:62rem;
+    margin:0 auto;
+    padding:0 1.5rem
+}
+ header.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.5rem 0
+}
+ header.top strong{
+    font:700 1.125rem var(--display);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ nav a{
+    margin-left:1.5rem;
+    color:var(--ink);
+    text-decoration:none;
+    font-weight:500
+}
+ nav a:hover{
+    color:var(--accent)
+}
+ .hero{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:2rem;
+    align-items:center;
+    padding:3rem 0 4rem
+}
+ h1{
+    font:700 clamp(2.5rem,6vw,4.25rem)/1.05 var(--display);
+    letter-spacing:-.02em;
+    margin:0 0 1.25rem
+}
+ .lead{
+    font-size:1.25rem;
+    color:var(--muted);
+    max-width:32rem;
+    margin:0 0 2rem
+}
+.btns {
+    display: flex;
+    gap: .75rem;          /* Espace entre les boutons */
+    margin-top: 1.5rem;   /* Espace avec le texte du dessus */
+}
+
+.btns a {
+    display: inline-block;
+    padding: .7rem 2.25rem; /* .7rem en haut/bas et 2.25rem à gauche/droite */
+    border-radius: .4rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0;            /* On supprime le margin-top qui cassait la hauteur */
+    white-space: nowrap;  /* Empêche le texte de passer à la ligne dans le bouton */
+}
+
+ .btn-main{
+    background:var(--accent);
+    color:var(--bg)
+}
+ .btn-alt{
+    border:1.5px solid var(--line);
+    color:var(--ink)
+}
+ .btn-alt:hover{
+    border-color:var(--accent)
+}
+ canvas{
+    width:100%;
+    aspect-ratio:1;
+    display:block
+}
+ section{
+    padding:3.5rem 0;
+    border-top:1px solid var(--line)
+}
+ h2{
+    font:700 1.75rem/1.2 var(--display);
+    margin:0 0 2rem
+}
+ .project{
+    display:grid;
+    grid-template-columns:14rem 1fr;
+    gap:1rem 2.5rem;
+    padding:1.75rem 0;
+    border-top:1px solid var(--line)
+}
+ .project:first-of-type{
+    border-top:0;
+    padding-top:0
+}
+ .project h3{
+    font:700 1.375rem var(--display);
+    margin:0
+}
+ .project .stack{
+    color:var(--muted);
+    font-size:.95rem;
+    margin:.4rem 0 0
+}
+ .project p{
+    margin:0 0 .75rem;
+    max-width:40rem
+}
+ .about p{
+    max-width:40rem;
+    margin:0 0 1rem
+}
+ footer{
+    padding:2rem 0 3rem;
+    color:var(--muted);
+    font-size:.95rem;
+    border-top:1px solid var(--line)
+}
+ @media (max-width:760px){
+     .hero{
+        grid-template-columns:1fr
+    }
+     canvas{
+        max-width:22rem;
+        margin:0 auto
+    }
+     .project{
+        grid-template-columns:1fr
+    }
+     nav a:first-child{
+        margin-left:0
+    }
+}

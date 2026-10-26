@@ -3,86 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Warren – Programmeur moteur de jeu et rendu temps réel</title>
+<title>Warren – Game Engine and Real-Time Rendering Programmer</title>
 <meta name="description" content="Portfolio de Warren : moteur de jeu en C++20, rendu DirectX 12, bibliothèques maths.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#eef1f6; --ink:#131a2b; --muted:#4d586f; --line:#c9d0de; --accent:#96560f; --sun:#d9962f;
-  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --body:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0f1626; --ink:#e8ebf2; --muted:#9aa5bd; --line:#26314a; --accent:#e6a84f; --sun:#e6a84f;}
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
-a{color:var(--accent);text-underline-offset:.2em}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
-header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
-header.top strong{font:700 1.125rem var(--display)}
-nav a{margin-left:1.5rem;color:var(--ink);text-decoration:none;font-weight:500}
-nav a:hover{color:var(--accent)}
-
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:3rem 0 4rem}
-h1{font:700 clamp(2.5rem,6vw,4.25rem)/1.05 var(--display);letter-spacing:-.02em;margin:0 0 1.25rem}
-.lead{font-size:1.25rem;color:var(--muted);max-width:32rem;margin:0 0 2rem}
-.btns a{display:inline-block;padding:.7rem 1.25rem;border-radius:.4rem;font-weight:600;text-decoration:none;margin:0 .75rem .75rem 0}
-.btn-main{background:var(--accent);color:var(--bg)}
-.btn-alt{border:1.5px solid var(--line);color:var(--ink)}
-.btn-alt:hover{border-color:var(--accent)}
-canvas{width:100%;aspect-ratio:1;display:block}
-
-section{padding:3.5rem 0;border-top:1px solid var(--line)}
-h2{font:700 1.75rem/1.2 var(--display);margin:0 0 2rem}
-.project{display:grid;grid-template-columns:14rem 1fr;gap:1rem 2.5rem;padding:1.75rem 0;border-top:1px solid var(--line)}
-.project:first-of-type{border-top:0;padding-top:0}
-.project h3{font:700 1.375rem var(--display);margin:0}
-.project .stack{color:var(--muted);font-size:.95rem;margin:.4rem 0 0}
-.project p{margin:0 0 .75rem;max-width:40rem}
-.about p{max-width:40rem;margin:0 0 1rem}
-footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
-
-@media (max-width:760px){
-  .hero{grid-template-columns:1fr}
-  canvas{max-width:22rem;margin:0 auto}
-  .project{grid-template-columns:1fr}
-  nav a:first-child{margin-left:0}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <strong>Warren</strong>
+    <strong>Warren Macabre</strong>
     <nav aria-label="Navigation principale">
-      <a href="#projets">Projets</a>
-      <a href="#apropos">À propos</a>
+      <a href="#projets">Projects</a>
+      <a href="#apropos">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
+ 
   <main>
     <div class="hero">
       <div>
         <h1>Engines and Games</h1>
         <p class="lead">Aspiring software engineer with a passion for video games and graphics programming. I am currently developing my own game engine.</p>
+      </div>
+      <canvas id="sky" role="img" aria-label="Animation de trois planètes en orbite autour d'un soleil"></canvas>
         <div class="btns">
           <a class="btn-main" href="#projets">See my project</a>
           <a class="btn-alt" href="cv/Macabre_GP3_CV2026_Anglais.pdf" target="_blank">See my resume (en)</a>
           <a class="btn-alt" href="#">See my resume (fr)</a>
         </div>
-      </div>
-      <canvas id="sky" role="img" aria-label="Animation de trois planètes en orbite autour d'un soleil"></canvas>
     </div>
-
+ 
     <section id="projets">
       <h2>Projets</h2>
-
+ 
       <article class="project">
         <div>
           <h3>Jupiter</h3>
@@ -93,7 +49,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px so
           <p><a href="https://github.com/Playm0r3/Jupiter" target="_blank">Code source sur GitHub</a></p>
         </div>
       </article>
-
+ 
       <article class="project">
         <div>
           <h3>Kill on Sight</h3>
@@ -101,11 +57,11 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px so
         </div>
         <div>
           <p>Multiplayer game for up to 4 players, developed during the Isart Digital game jam. </p>
-          <p><a href="https://drive.google.com/drive/folders/180yadXczhEwx3LHX4qFETirEkvmAB6Fo?usp=sharing">Build in my Google drive</a></p>
+          <p><a href="https://daniexcla.itch.io/kill-on-sight" target="_blank">Build on Itch.io</a></p>
           <p><a href="https://youtu.be/s_zyhgkpU8M?si=geEPRQkjmHolrkCE" target="_blank">Trailler on Youtube</a><p>
         </div>
       </article>
-
+ 
       <article class="project">
         <div>
           <h3>Arena Shooter</h3>
@@ -113,79 +69,26 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px so
         </div>
         <div>
           <p>It's my first game / mini game I developed with game engine unity</p>
-          <p><a href="https://drive.google.com/drive/folders/180yadXczhEwx3LHX4qFETirEkvmAB6Fo?usp=sharing" target="_blank">Build on my Google drive</a></p>
+          <p><a href="https://drive.google.com/drive/u/1/folders/1Ul79hBlTBnSs-VzIw-IgVUx2QUv0Yc1X" target="_blank">Build on my Google drive</a></p>
         </div>
       </article>
     </section>
-
+ 
     <section id="apropos" class="about">
       <h2>À propos</h2>
-      <p>Je m'appelle Warren. Je programme en C++ et je m'intéresse à tout ce qui se passe entre le code et l'écran : API graphiques, architecture de moteur, outils de build.</p>
-      <p>Je cherche un stage ou un premier poste dans le jeu vidéo ou le rendu temps réel.</p>
+      <p>My name is Warren. I program in C++ and am interested in everything that happens between the code and the screen: graphics APIs, engine architecture, and build tools.</p>
+      <p>I am looking for a work-study position in video games, real-time rendering, or any other field of programming.</p>
     </section>
-
+ 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Le plus simple est de m'écrire à <a href="mailto:ton@email.com">warren.macabre@proton.me</a>. Je suis aussi sur <a href="https://github.com/Playm0r3" target="_blank">GitHub</a> et <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjev7W-66CXAxUPNvsDHQX3JQ8QFnoECCcQAQ&url=https%3A%2F%2Ffr.linkedin.com%2Fin%2Fwarren-macabre-a0b4943a6&usg=AOvVaw19TlB0_dnXqwSnnbXAbqO5&opi=89978449" target="_blank">LinkedIn</a>.</p>
+      <p>The easiest way is to write to me at <a href="mailto:ton@email.com">warren.macabre@proton.me</a>. You can find me also on <a href="https://github.com/Playm0r3" target="_blank">GitHub</a> and <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjev7W-66CXAxUPNvsDHQX3JQ8QFnoECCcQAQ&url=https%3A%2F%2Ffr.linkedin.com%2Fin%2Fwarren-macabre-a0b4943a6&usg=AOvVaw19TlB0_dnXqwSnnbXAbqO5&opi=89978449" target="_blank">LinkedIn</a>.</p>
     </section>
   </main>
-
+ 
   <footer>© <span id="year">2026</span> Warren</footer>
 </div>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-(function () {
-  const c = document.getElementById('sky'), g = c.getContext('2d');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const bodies = [
-    { a: .30, e: .15, s: 1.0, r: 5,  p: 0 },
-    { a: .52, e: .10, s: .55, r: 9,  p: 2.1 },
-    { a: .75, e: .25, s: .32, r: 6,  p: 4.2 }
-  ];
-  let size = 0, dpr = 1;
-
-  function resize() {
-    dpr = window.devicePixelRatio || 1;
-    size = c.clientWidth;
-    c.width = c.height = Math.round(size * dpr);
-  }
-
-  function draw(t) {
-    const css = getComputedStyle(document.documentElement);
-    const ink = css.getPropertyValue('--muted').trim();
-    const line = css.getPropertyValue('--line').trim();
-    const sun = css.getPropertyValue('--sun').trim();
-    const cx = size / 2, cy = size / 2, R = size / 2 * .95;
-    g.setTransform(dpr, 0, 0, dpr, 0, 0);
-    g.clearRect(0, 0, size, size);
-    g.lineWidth = 1;
-
-    for (const b of bodies) {
-      const a = b.a * R, bb = a * Math.sqrt(1 - b.e * b.e), f = a * b.e;
-      g.strokeStyle = line;
-      g.beginPath();
-      g.ellipse(cx - f, cy, a, bb, 0, 0, Math.PI * 2);
-      g.stroke();
-      const ang = t * b.s + b.p;
-      g.fillStyle = ink;
-      g.beginPath();
-      g.arc(cx - f + a * Math.cos(ang), cy + bb * Math.sin(ang), b.r, 0, Math.PI * 2);
-      g.fill();
-    }
-    g.fillStyle = sun;
-    g.beginPath();
-    g.arc(cx, cy, 14, 0, Math.PI * 2);
-    g.fill();
-  }
-
-  function loop(ms) { draw(ms / 1000 * .6); requestAnimationFrame(loop); }
-
-  resize();
-  addEventListener('resize', () => { resize(); if (still) draw(1); });
-  if (still) draw(1); else requestAnimationFrame(loop);
-})();
-</script>
+ 
+<script src="script.js"></script>
 </body>
 </html>
